@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+  <div class="row justify-content-center bg-dark align-items-center" style="height: 75px;">
+    <button (click)="addToList()" class="btn btn-secondary">Add New Block</button>
+  </div>
+
+  <div class="row mt-1" style="height: 100px;">
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+  
+    <div class="col-12 col-md-6 bg-secondary d-flex justify-content-between align-items-center">
+      <input [(ngModel)]="newTask" class="form-control" type="text" name="" id="">
+      <button (click)="addTask()" class="btn btn-primary">Add</button>
+    </div>
+  
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+  </div>
+
+  <div *ngFor ="let item of list; let index = index;" class="row mt-1" style="height: 100px;">
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+
+    <div class="col-12 col-md-6 bg-secondary d-flex justify-content-between align-items-center" >
+      <div class="text-light h3">
+        {{item}}
+      </div>
+      <button (click)="deleteTask(index)" class="btn btn-danger">Delete</button>
+    </div>
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div>    
+  </div>
+
+  
+  
+</div>
