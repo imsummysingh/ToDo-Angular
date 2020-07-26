@@ -25,8 +25,8 @@ export class AppComponent {
     this.counter+=1;
   }
 
-  public addToList(){
-    this.list.push(1);
-  }
+  // public addToList(){
+  //   this.list.push(1);
+  // }
 
 }
